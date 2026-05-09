@@ -1,0 +1,3 @@
+[console_scripts]
+frontier_explorer = frontier_explorer.explorer:main
+

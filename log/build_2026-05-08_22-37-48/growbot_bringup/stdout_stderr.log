@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing growbot_bringup.egg-info/PKG-INFO
+writing dependency_links to growbot_bringup.egg-info/dependency_links.txt
+writing entry points to growbot_bringup.egg-info/entry_points.txt
+writing requirements to growbot_bringup.egg-info/requires.txt
+writing top-level names to growbot_bringup.egg-info/top_level.txt
+reading manifest file 'growbot_bringup.egg-info/SOURCES.txt'
+writing manifest file 'growbot_bringup.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot-bringup.egg-link (link to .)
+Installing random_explorer script to /home/frankie/ros2_ws/install/growbot_bringup/lib/growbot_bringup
+
+Installed /home/frankie/ros2_ws/build/growbot_bringup
+running symlink_data
+symbolically linking /home/frankie/ros2_ws/build/growbot_bringup/resource/growbot_bringup -> /home/frankie/ros2_ws/install/growbot_bringup/share/ament_index/resource_index/packages
+symbolically linking /home/frankie/ros2_ws/build/growbot_bringup/package.xml -> /home/frankie/ros2_ws/install/growbot_bringup/share/growbot_bringup
+symbolically linking /home/frankie/ros2_ws/build/growbot_bringup/growbot_bringup/launch/auto_explore.launch.py -> /home/frankie/ros2_ws/install/growbot_bringup/share/growbot_bringup/launch

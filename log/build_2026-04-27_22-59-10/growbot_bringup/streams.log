@@ -1,0 +1,37 @@
+[0.515s] Invoking command in '/home/frankie/ros2_ws/src/growbot_bringup': PYTHONPATH=/home/frankie/ros2_ws/build/growbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/growbot_bringup build --build-base /home/frankie/ros2_ws/build/growbot_bringup/build install --record /home/frankie/ros2_ws/build/growbot_bringup/install.log --single-version-externally-managed install_data
+[0.671s] running egg_info
+[0.672s] creating ../../build/growbot_bringup/growbot_bringup.egg-info
+[0.672s] writing ../../build/growbot_bringup/growbot_bringup.egg-info/PKG-INFO
+[0.672s] writing dependency_links to ../../build/growbot_bringup/growbot_bringup.egg-info/dependency_links.txt
+[0.672s] writing entry points to ../../build/growbot_bringup/growbot_bringup.egg-info/entry_points.txt
+[0.672s] writing requirements to ../../build/growbot_bringup/growbot_bringup.egg-info/requires.txt
+[0.672s] writing top-level names to ../../build/growbot_bringup/growbot_bringup.egg-info/top_level.txt
+[0.672s] writing manifest file '../../build/growbot_bringup/growbot_bringup.egg-info/SOURCES.txt'
+[0.674s] reading manifest file '../../build/growbot_bringup/growbot_bringup.egg-info/SOURCES.txt'
+[0.674s] writing manifest file '../../build/growbot_bringup/growbot_bringup.egg-info/SOURCES.txt'
+[0.674s] running build
+[0.675s] running build_py
+[0.675s] creating /home/frankie/ros2_ws/build/growbot_bringup/build
+[0.675s] creating /home/frankie/ros2_ws/build/growbot_bringup/build/lib
+[0.675s] creating /home/frankie/ros2_ws/build/growbot_bringup/build/lib/growbot_bringup
+[0.675s] copying growbot_bringup/random_explorer.py -> /home/frankie/ros2_ws/build/growbot_bringup/build/lib/growbot_bringup
+[0.675s] copying growbot_bringup/__init__.py -> /home/frankie/ros2_ws/build/growbot_bringup/build/lib/growbot_bringup
+[0.675s] running install
+[0.675s] running install_lib
+[0.676s] creating /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup
+[0.676s] copying /home/frankie/ros2_ws/build/growbot_bringup/build/lib/growbot_bringup/random_explorer.py -> /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup
+[0.676s] copying /home/frankie/ros2_ws/build/growbot_bringup/build/lib/growbot_bringup/__init__.py -> /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup
+[0.676s] byte-compiling /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup/random_explorer.py to random_explorer.cpython-310.pyc
+[0.677s] byte-compiling /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup/__init__.py to __init__.cpython-310.pyc
+[0.677s] running install_data
+[0.677s] creating /home/frankie/ros2_ws/install/growbot_bringup/share/ament_index
+[0.677s] creating /home/frankie/ros2_ws/install/growbot_bringup/share/ament_index/resource_index
+[0.677s] creating /home/frankie/ros2_ws/install/growbot_bringup/share/ament_index/resource_index/packages
+[0.677s] copying resource/growbot_bringup -> /home/frankie/ros2_ws/install/growbot_bringup/share/ament_index/resource_index/packages
+[0.677s] copying package.xml -> /home/frankie/ros2_ws/install/growbot_bringup/share/growbot_bringup
+[0.677s] running install_egg_info
+[0.679s] Copying ../../build/growbot_bringup/growbot_bringup.egg-info to /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup-0.0.0-py3.10.egg-info
+[0.680s] running install_scripts
+[0.695s] Installing random_explorer script to /home/frankie/ros2_ws/install/growbot_bringup/lib/growbot_bringup
+[0.695s] writing list of installed files to '/home/frankie/ros2_ws/build/growbot_bringup/install.log'
+[0.718s] Invoked command in '/home/frankie/ros2_ws/src/growbot_bringup' returned '0': PYTHONPATH=/home/frankie/ros2_ws/build/growbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/growbot_bringup build --build-base /home/frankie/ros2_ws/build/growbot_bringup/build install --record /home/frankie/ros2_ws/build/growbot_bringup/install.log --single-version-externally-managed install_data

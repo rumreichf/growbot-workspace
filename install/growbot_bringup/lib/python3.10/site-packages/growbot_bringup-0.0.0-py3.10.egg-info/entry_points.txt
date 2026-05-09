@@ -1,0 +1,3 @@
+[console_scripts]
+random_explorer = growbot_bringup.random_explorer:main
+

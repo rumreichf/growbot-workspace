@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/growbot_bringup/growbot_bringup.egg-info/PKG-INFO
+writing dependency_links to ../../build/growbot_bringup/growbot_bringup.egg-info/dependency_links.txt
+writing entry points to ../../build/growbot_bringup/growbot_bringup.egg-info/entry_points.txt
+writing requirements to ../../build/growbot_bringup/growbot_bringup.egg-info/requires.txt
+writing top-level names to ../../build/growbot_bringup/growbot_bringup.egg-info/top_level.txt
+reading manifest file '../../build/growbot_bringup/growbot_bringup.egg-info/SOURCES.txt'
+writing manifest file '../../build/growbot_bringup/growbot_bringup.egg-info/SOURCES.txt'
+running build
+running build_py
+copying growbot_bringup/random_explorer.py -> /home/frankie/ros2_ws/build/growbot_bringup/build/lib/growbot_bringup
+running install
+running install_lib
+copying /home/frankie/ros2_ws/build/growbot_bringup/build/lib/growbot_bringup/random_explorer.py -> /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup
+byte-compiling /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup/random_explorer.py to random_explorer.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/growbot_bringup/growbot_bringup.egg-info to /home/frankie/ros2_ws/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup-0.0.0-py3.10.egg-info
+running install_scripts
+Installing random_explorer script to /home/frankie/ros2_ws/install/growbot_bringup/lib/growbot_bringup
+writing list of installed files to '/home/frankie/ros2_ws/build/growbot_bringup/install.log'

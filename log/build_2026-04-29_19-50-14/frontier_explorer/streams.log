@@ -1,0 +1,24 @@
+[0.736s] Invoking command in '/home/frankie/ros2_ws/src/frontier_explorer': PYTHONPATH=/home/frankie/ros2_ws/build/frontier_explorer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/frontier_explorer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frontier_explorer build --build-base /home/frankie/ros2_ws/build/frontier_explorer/build install --record /home/frankie/ros2_ws/build/frontier_explorer/install.log --single-version-externally-managed install_data
+[0.897s] running egg_info
+[0.898s] writing ../../build/frontier_explorer/frontier_explorer.egg-info/PKG-INFO
+[0.904s] writing dependency_links to ../../build/frontier_explorer/frontier_explorer.egg-info/dependency_links.txt
+[0.904s] writing entry points to ../../build/frontier_explorer/frontier_explorer.egg-info/entry_points.txt
+[0.904s] writing requirements to ../../build/frontier_explorer/frontier_explorer.egg-info/requires.txt
+[0.904s] writing top-level names to ../../build/frontier_explorer/frontier_explorer.egg-info/top_level.txt
+[0.905s] reading manifest file '../../build/frontier_explorer/frontier_explorer.egg-info/SOURCES.txt'
+[0.906s] writing manifest file '../../build/frontier_explorer/frontier_explorer.egg-info/SOURCES.txt'
+[0.906s] running build
+[0.906s] running build_py
+[0.906s] copying frontier_explorer/explorer.py -> /home/frankie/ros2_ws/build/frontier_explorer/build/lib/frontier_explorer
+[0.906s] running install
+[0.907s] running install_lib
+[0.907s] copying /home/frankie/ros2_ws/build/frontier_explorer/build/lib/frontier_explorer/explorer.py -> /home/frankie/ros2_ws/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer
+[0.908s] byte-compiling /home/frankie/ros2_ws/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer/explorer.py to explorer.cpython-310.pyc
+[0.908s] running install_data
+[0.908s] running install_egg_info
+[0.911s] removing '/home/frankie/ros2_ws/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer-0.0.0-py3.10.egg-info' (and everything under it)
+[0.911s] Copying ../../build/frontier_explorer/frontier_explorer.egg-info to /home/frankie/ros2_ws/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer-0.0.0-py3.10.egg-info
+[0.912s] running install_scripts
+[0.926s] Installing frontier_explorer script to /home/frankie/ros2_ws/install/frontier_explorer/lib/frontier_explorer
+[0.926s] writing list of installed files to '/home/frankie/ros2_ws/build/frontier_explorer/install.log'
+[0.958s] Invoked command in '/home/frankie/ros2_ws/src/frontier_explorer' returned '0': PYTHONPATH=/home/frankie/ros2_ws/build/frontier_explorer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/frontier_explorer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frontier_explorer build --build-base /home/frankie/ros2_ws/build/frontier_explorer/build install --record /home/frankie/ros2_ws/build/frontier_explorer/install.log --single-version-externally-managed install_data

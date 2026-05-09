@@ -1,0 +1,19 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running develop
+running egg_info
+writing nav2_wfd.egg-info/PKG-INFO
+writing dependency_links to nav2_wfd.egg-info/dependency_links.txt
+writing entry points to nav2_wfd.egg-info/entry_points.txt
+writing requirements to nav2_wfd.egg-info/requires.txt
+writing top-level names to nav2_wfd.egg-info/top_level.txt
+reading manifest file 'nav2_wfd.egg-info/SOURCES.txt'
+writing manifest file 'nav2_wfd.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/frankie/ros2_ws/install/nav2_wfd/lib/python3.10/site-packages/nav2-wfd.egg-link (link to .)
+Installing explore script to /home/frankie/ros2_ws/install/nav2_wfd/lib/nav2_wfd
+
+Installed /home/frankie/ros2_ws/build/nav2_wfd
+running symlink_data
+symbolically linking /home/frankie/ros2_ws/build/nav2_wfd/resource/nav2_wfd -> /home/frankie/ros2_ws/install/nav2_wfd/share/ament_index/resource_index/packages
+symbolically linking /home/frankie/ros2_ws/build/nav2_wfd/package.xml -> /home/frankie/ros2_ws/install/nav2_wfd/share/nav2_wfd
