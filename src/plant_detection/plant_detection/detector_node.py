@@ -31,7 +31,7 @@ class PlantDetector(Node):
 
         self.model = YOLO(
             os.path.expanduser(
-                "~/ros2_ws/yolov8/runs/detect/yolov8_potted_plants-12/weights/best.pt"
+                "~/growbot-workspace/yolov8/runs/detect/yolov8_potted_plants-12/weights/best.pt"
             )
         )
 
