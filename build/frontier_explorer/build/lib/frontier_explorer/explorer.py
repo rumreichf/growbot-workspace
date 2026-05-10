@@ -5,6 +5,7 @@ from rclpy.action import ActionClient
 from nav_msgs.msg import Odometry, OccupancyGrid
 from nav2_msgs.action import NavigateToPose
 from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import Pose
 
 import random
 import math
@@ -145,6 +146,8 @@ class FrontierExplorer(Node):
 
         if self.goal_active:
             return
+        if not self.nav_client.server_is_ready():
+    	    return
 
         grid = self.map_data.data
         width = self.map_data.info.width

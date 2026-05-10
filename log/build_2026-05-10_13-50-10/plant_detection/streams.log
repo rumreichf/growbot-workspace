@@ -1,0 +1,24 @@
+[1.853s] Invoking command in '/home/frankie/ros2_ws/src/plant_detection': PYTHONPATH=/home/frankie/ros2_ws/build/plant_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/plant_detection build --build-base /home/frankie/ros2_ws/build/plant_detection/build install --record /home/frankie/ros2_ws/build/plant_detection/install.log --single-version-externally-managed install_data
+[2.400s] running egg_info
+[2.400s] writing ../../build/plant_detection/plant_detection.egg-info/PKG-INFO
+[2.400s] writing dependency_links to ../../build/plant_detection/plant_detection.egg-info/dependency_links.txt
+[2.401s] writing entry points to ../../build/plant_detection/plant_detection.egg-info/entry_points.txt
+[2.403s] writing requirements to ../../build/plant_detection/plant_detection.egg-info/requires.txt
+[2.403s] writing top-level names to ../../build/plant_detection/plant_detection.egg-info/top_level.txt
+[2.406s] reading manifest file '../../build/plant_detection/plant_detection.egg-info/SOURCES.txt'
+[2.407s] writing manifest file '../../build/plant_detection/plant_detection.egg-info/SOURCES.txt'
+[2.408s] running build
+[2.408s] running build_py
+[2.408s] copying plant_detection/detector_node.py -> /home/frankie/ros2_ws/build/plant_detection/build/lib/plant_detection
+[2.408s] running install
+[2.409s] running install_lib
+[2.411s] copying /home/frankie/ros2_ws/build/plant_detection/build/lib/plant_detection/detector_node.py -> /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection
+[2.413s] byte-compiling /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection/detector_node.py to detector_node.cpython-310.pyc
+[2.414s] running install_data
+[2.415s] running install_egg_info
+[2.418s] removing '/home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection-0.0.0-py3.10.egg-info' (and everything under it)
+[2.419s] Copying ../../build/plant_detection/plant_detection.egg-info to /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection-0.0.0-py3.10.egg-info
+[2.420s] running install_scripts
+[2.465s] Installing detector script to /home/frankie/ros2_ws/install/plant_detection/lib/plant_detection
+[2.466s] writing list of installed files to '/home/frankie/ros2_ws/build/plant_detection/install.log'
+[2.527s] Invoked command in '/home/frankie/ros2_ws/src/plant_detection' returned '0': PYTHONPATH=/home/frankie/ros2_ws/build/plant_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/plant_detection build --build-base /home/frankie/ros2_ws/build/plant_detection/build install --record /home/frankie/ros2_ws/build/plant_detection/install.log --single-version-externally-managed install_data

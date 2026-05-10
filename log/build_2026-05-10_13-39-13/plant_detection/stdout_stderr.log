@@ -1,0 +1,26 @@
+running egg_info
+writing ../../build/plant_detection/plant_detection.egg-info/PKG-INFO
+writing dependency_links to ../../build/plant_detection/plant_detection.egg-info/dependency_links.txt
+writing entry points to ../../build/plant_detection/plant_detection.egg-info/entry_points.txt
+writing requirements to ../../build/plant_detection/plant_detection.egg-info/requires.txt
+writing top-level names to ../../build/plant_detection/plant_detection.egg-info/top_level.txt
+reading manifest file '../../build/plant_detection/plant_detection.egg-info/SOURCES.txt'
+writing manifest file '../../build/plant_detection/plant_detection.egg-info/SOURCES.txt'
+running build
+running build_py
+copying plant_detection/detector_node.py -> /home/frankie/ros2_ws/build/plant_detection/build/lib/plant_detection
+copying plant_detection/__init__.py -> /home/frankie/ros2_ws/build/plant_detection/build/lib/plant_detection
+running install
+running install_lib
+copying /home/frankie/ros2_ws/build/plant_detection/build/lib/plant_detection/detector_node.py -> /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection
+copying /home/frankie/ros2_ws/build/plant_detection/build/lib/plant_detection/__init__.py -> /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection
+byte-compiling /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection/detector_node.py to detector_node.cpython-310.pyc
+Sorry: TabError: inconsistent use of tabs and spaces in indentation (detector_node.py, line 20)
+byte-compiling /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection/__init__.py to __init__.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/plant_detection/plant_detection.egg-info to /home/frankie/ros2_ws/install/plant_detection/lib/python3.10/site-packages/plant_detection-0.0.0-py3.10.egg-info
+running install_scripts
+Installing detector script to /home/frankie/ros2_ws/install/plant_detection/lib/plant_detection
+writing list of installed files to '/home/frankie/ros2_ws/build/plant_detection/install.log'
