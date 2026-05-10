@@ -1,0 +1,29 @@
+[1.604s] Invoking command in '/home/emily-val/growbot-workspace/src/frontier_explorer': PYTHONPATH=/home/emily-val/growbot-workspace/build/frontier_explorer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frontier_explorer build --build-base /home/emily-val/growbot-workspace/build/frontier_explorer/build install --record /home/emily-val/growbot-workspace/build/frontier_explorer/install.log --single-version-externally-managed install_data
+[1.835s] running egg_info
+[1.835s] writing ../../build/frontier_explorer/frontier_explorer.egg-info/PKG-INFO
+[1.836s] writing dependency_links to ../../build/frontier_explorer/frontier_explorer.egg-info/dependency_links.txt
+[1.836s] writing entry points to ../../build/frontier_explorer/frontier_explorer.egg-info/entry_points.txt
+[1.836s] writing requirements to ../../build/frontier_explorer/frontier_explorer.egg-info/requires.txt
+[1.836s] writing top-level names to ../../build/frontier_explorer/frontier_explorer.egg-info/top_level.txt
+[1.838s] reading manifest file '../../build/frontier_explorer/frontier_explorer.egg-info/SOURCES.txt'
+[1.852s] writing manifest file '../../build/frontier_explorer/frontier_explorer.egg-info/SOURCES.txt'
+[1.852s] running build
+[1.852s] running build_py
+[1.853s] copying frontier_explorer/__init__.py -> /home/emily-val/growbot-workspace/build/frontier_explorer/build/lib/frontier_explorer
+[1.854s] copying frontier_explorer/explorer.py -> /home/emily-val/growbot-workspace/build/frontier_explorer/build/lib/frontier_explorer
+[1.855s] running install
+[1.855s] running install_lib
+[1.856s] copying /home/emily-val/growbot-workspace/build/frontier_explorer/build/lib/frontier_explorer/__init__.py -> /home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer
+[1.856s] copying /home/emily-val/growbot-workspace/build/frontier_explorer/build/lib/frontier_explorer/explorer.py -> /home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer
+[1.857s] byte-compiling /home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer/__init__.py to __init__.cpython-310.pyc
+[1.857s] byte-compiling /home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer/explorer.py to explorer.cpython-310.pyc
+[1.858s] running install_data
+[1.858s] copying resource/frontier_explorer -> /home/emily-val/growbot-workspace/install/frontier_explorer/share/ament_index/resource_index/packages
+[1.858s] copying package.xml -> /home/emily-val/growbot-workspace/install/frontier_explorer/share/frontier_explorer
+[1.858s] running install_egg_info
+[1.859s] removing '/home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer-0.0.0-py3.10.egg-info' (and everything under it)
+[1.860s] Copying ../../build/frontier_explorer/frontier_explorer.egg-info to /home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages/frontier_explorer-0.0.0-py3.10.egg-info
+[1.862s] running install_scripts
+[1.882s] Installing frontier_explorer script to /home/emily-val/growbot-workspace/install/frontier_explorer/lib/frontier_explorer
+[1.883s] writing list of installed files to '/home/emily-val/growbot-workspace/build/frontier_explorer/install.log'
+[1.947s] Invoked command in '/home/emily-val/growbot-workspace/src/frontier_explorer' returned '0': PYTHONPATH=/home/emily-val/growbot-workspace/build/frontier_explorer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emily-val/growbot-workspace/install/frontier_explorer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/frontier_explorer build --build-base /home/emily-val/growbot-workspace/build/frontier_explorer/build install --record /home/emily-val/growbot-workspace/build/frontier_explorer/install.log --single-version-externally-managed install_data

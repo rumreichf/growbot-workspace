@@ -1,0 +1,31 @@
+[1.574s] Invoking command in '/home/emily-val/growbot-workspace/src/growbot_bringup': PYTHONPATH=/home/emily-val/growbot-workspace/build/growbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/growbot_bringup build --build-base /home/emily-val/growbot-workspace/build/growbot_bringup/build install --record /home/emily-val/growbot-workspace/build/growbot_bringup/install.log --single-version-externally-managed install_data
+[1.785s] running egg_info
+[1.786s] writing ../../build/growbot_bringup/growbot_bringup.egg-info/PKG-INFO
+[1.786s] writing dependency_links to ../../build/growbot_bringup/growbot_bringup.egg-info/dependency_links.txt
+[1.787s] writing entry points to ../../build/growbot_bringup/growbot_bringup.egg-info/entry_points.txt
+[1.787s] writing requirements to ../../build/growbot_bringup/growbot_bringup.egg-info/requires.txt
+[1.787s] writing top-level names to ../../build/growbot_bringup/growbot_bringup.egg-info/top_level.txt
+[1.789s] reading manifest file '../../build/growbot_bringup/growbot_bringup.egg-info/SOURCES.txt'
+[1.828s] writing manifest file '../../build/growbot_bringup/growbot_bringup.egg-info/SOURCES.txt'
+[1.829s] running build
+[1.829s] running build_py
+[1.829s] copying growbot_bringup/random_explorer.py -> /home/emily-val/growbot-workspace/build/growbot_bringup/build/lib/growbot_bringup
+[1.830s] copying growbot_bringup/__init__.py -> /home/emily-val/growbot-workspace/build/growbot_bringup/build/lib/growbot_bringup
+[1.830s] running install
+[1.830s] running install_lib
+[1.831s] copying /home/emily-val/growbot-workspace/build/growbot_bringup/build/lib/growbot_bringup/random_explorer.py -> /home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup
+[1.831s] copying /home/emily-val/growbot-workspace/build/growbot_bringup/build/lib/growbot_bringup/__init__.py -> /home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup
+[1.832s] byte-compiling /home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup/random_explorer.py to random_explorer.cpython-310.pyc
+[1.833s] byte-compiling /home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup/__init__.py to __init__.cpython-310.pyc
+[1.833s] running install_data
+[1.833s] copying resource/growbot_bringup -> /home/emily-val/growbot-workspace/install/growbot_bringup/share/ament_index/resource_index/packages
+[1.833s] copying package.xml -> /home/emily-val/growbot-workspace/install/growbot_bringup/share/growbot_bringup
+[1.833s] copying growbot_bringup/launch/auto_explore.launch.py -> /home/emily-val/growbot-workspace/install/growbot_bringup/share/growbot_bringup/launch
+[1.833s] copying config/nav2_params.yaml -> /home/emily-val/growbot-workspace/install/growbot_bringup/share/growbot_bringup/config
+[1.833s] running install_egg_info
+[1.835s] removing '/home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup-0.0.0-py3.10.egg-info' (and everything under it)
+[1.835s] Copying ../../build/growbot_bringup/growbot_bringup.egg-info to /home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages/growbot_bringup-0.0.0-py3.10.egg-info
+[1.837s] running install_scripts
+[1.863s] Installing random_explorer script to /home/emily-val/growbot-workspace/install/growbot_bringup/lib/growbot_bringup
+[1.864s] writing list of installed files to '/home/emily-val/growbot-workspace/build/growbot_bringup/install.log'
+[1.930s] Invoked command in '/home/emily-val/growbot-workspace/src/growbot_bringup' returned '0': PYTHONPATH=/home/emily-val/growbot-workspace/build/growbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/emily-val/growbot-workspace/install/growbot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/growbot_bringup build --build-base /home/emily-val/growbot-workspace/build/growbot_bringup/build install --record /home/emily-val/growbot-workspace/build/growbot_bringup/install.log --single-version-externally-managed install_data

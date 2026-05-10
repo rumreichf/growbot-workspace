@@ -11,7 +11,7 @@ import os
 def generate_launch_description():
 
     turtlebot3_gazebo_dir = get_package_share_directory(
-        'turtlebot3_gazebo'
+        'my_custom_world'
     )
 
     slam_toolbox_dir = get_package_share_directory(
@@ -36,7 +36,7 @@ def generate_launch_description():
                 os.path.join(
                     turtlebot3_gazebo_dir,
                     'launch',
-                    'turtlebot3_world.launch.py'
+                    'custom_house.launch.py'
                 )
             )
         ),
