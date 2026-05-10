@@ -31,7 +31,7 @@ class PlantDetector(Node):
 
         self.model = YOLO(
             os.path.expanduser(
-                "~/growbot-workspace/yolov8/runs/detect/yolov8_potted_plants-12/weights/best.pt"
+                "~/ros2_ws/yolov8/runs/detect/yolov8_potted_plants-12/weights/best.pt"
             )
         )
 
@@ -52,7 +52,7 @@ class PlantDetector(Node):
 
     def save_plants(self):
 
-        with open('plants.json', 'w') as f:
+        with open(self.save_path, 'w') as f:
 
             json.dump(
                 self.detected_plants,
