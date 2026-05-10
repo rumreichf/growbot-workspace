@@ -1,0 +1,3 @@
+[console_scripts]
+detector = plant_detection.detector_node:main
+

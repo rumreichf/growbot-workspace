@@ -2,151 +2,254 @@ import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
 
-from nav_msgs.msg import Odometry
-from nav_msgs.msg import OccupancyGrid
+from nav_msgs.msg import Odometry, OccupancyGrid
 from nav2_msgs.action import NavigateToPose
 from geometry_msgs.msg import PoseStamped
+
 import random
-import numpy as np
+import math
+
 
 class FrontierExplorer(Node):
 
-	def __init__(self):
-		super().__init__('frontier_explorer')
+    def __init__(self):
+        super().__init__('frontier_explorer')
 
-		self.robot_x = 0.0
-		self.robot_y = 0.0
+        self.robot_x = 0.0
+        self.robot_y = 0.0
 
-		self.odom_sub = self.create_subscription(
-			Odometry,
-			'/odom',
-			self.odom_callback,
-			10
-		)
+        self.map_data = None
 
-		self.map_sub = self.create_subscription(
-			OccupancyGrid,
-			'/map',
-			self.map_callback,
-			10
-		)
+        self.goal_active = False
 
-		self.map_data = None
+        self.failed_goals = []
 
-		self.nav_client = ActionClient(
-			self,
-			NavigateToPose,
-			'navigate_to_pose'
-		)
+        self.no_frontier_count = 0
 
-		self.get_logger().info("waiting for nav2")
-		self.nav_client.wait_for_server()
-		self.get_logger().info("Nav2 ready")
+        self.MIN_FRONTIER_COUNT = 10
+        self.MIN_GOAL_DISTANCE = 1.0
 
-		self.goal_active = False
+        self.odom_sub = self.create_subscription(
+            Odometry,
+            '/odom',
+            self.odom_callback,
+            10
+        )
 
-		self.timer = self.create_timer(3.0, self.explore)
+        self.map_sub = self.create_subscription(
+            OccupancyGrid,
+            '/map',
+            self.map_callback,
+            10
+        )
 
-		self.get_logger().info("Frontier Explorer Started")
+        self.nav_client = ActionClient(
+            self,
+            NavigateToPose,
+            'navigate_to_pose'
+        )
 
+        self.get_logger().info("Waiting for Nav2...")
+        self.nav_client.wait_for_server()
+        self.get_logger().info("Nav2 ready")
 
-	def map_callback(self, msg):
-		self.map_data = msg
-	def find_frontiers(self, grid, width, height):
-		frontiers = []
+        self.timer = self.create_timer(5.0, self.explore)
 
-		for y in range(1, height - 1):
-			for x in range(1, width - 1):
+        self.get_logger().info("Frontier Explorer Started")
 
-				i = y * width + x
+    def odom_callback(self, msg):
+        self.robot_x = msg.pose.pose.position.x
+        self.robot_y = msg.pose.pose.position.y
 
-				if grid[i] != 0:
-					continue
+    def map_callback(self, msg):
+        self.map_data = msg
 
-				neighbors = [
-					grid[i+1], grid[i-1],
-					grid[i+width], grid[i-width]
-				]
+    def find_frontiers(self, grid, width, height):
 
-				if -1 in neighbors:
-					frontiers.append((x,y))
-		return frontiers
+        frontiers = []
 
+        for y in range(1, height - 1):
+            for x in range(1, width - 1):
 
-	def send_goal(self, x, y):
-		self.goal_active = True
+                i = y * width + x
 
-		goal = NavigateToPose.Goal()
+                if grid[i] != 0:
+                    continue
 
-		pose = PoseStamped()
-		pose.header.frame_id = "map"
-		pose.header.stamp = self.get_clock().now().to_msg()
+                neighbors = [
+                    grid[i + 1],
+                    grid[i - 1],
+                    grid[i + width],
+                    grid[i - width]
+                ]
 
-		pose.pose.position.x = float(x)
-		pose.pose.position.y = float(y)
-		pose.pose.orientation.w = 1.0
+                if -1 in neighbors:
+                    frontiers.append((x, y))
 
-		goal.pose = pose
+        return frontiers
 
-		self.nav_client.send_goal_async(goal).add_done_callback(self.goal_response_callback)
+    def is_goal_valid(self, x, y):
 
+        dist = math.sqrt(
+            (x - self.robot_x) ** 2 +
+            (y - self.robot_y) ** 2
+        )
 
-	def explore(self):
-		if self.map_data is None:
-			return
-		if self.goal_active:
-			return
+        if dist < self.MIN_GOAL_DISTANCE:
+            return False
 
-		grid = self.map_data.data
-		width = self.map_data.info.width
-		height = self.map_data.info.height
+        for gx, gy in self.failed_goals:
 
-		frontiers = self.find_frontiers(grid, width, height)
+            failed_dist = math.sqrt(
+                (x - gx) ** 2 +
+                (y - gy) ** 2
+            )
 
-		if len(frontiers) == 0:
-			self.get_logger().info("No frontiers found")
-			return
-		target = random.choice(frontiers)
+            if failed_dist < 1.0:
+                return False
 
-		origin = self.map_data.info.origin.position
-		res = self.map_data.info.resolution
+        return True
 
-		x = origin.x + target[0] * res
-		y = origin.y + target[1] * res
+    def send_goal(self, x, y):
 
+        self.goal_active = True
 
-		self.get_logger().info(f"Sending Nav2 goal: ({x}, {y})")
+        goal = NavigateToPose.Goal()
 
-		self.send_goal(x, y)
+        pose = PoseStamped()
 
-	def goal_response_callback(self, future):
-		goal_handle = future.result()
+        pose.header.frame_id = "map"
+        pose.header.stamp = self.get_clock().now().to_msg()
 
-		if not goal_handle.accepted:
-			self.get_logger().info("Goal rejected")
-			self.goal_active = False
-			return
-		self.get_logger().info("Goal accepted")
+        pose.pose.position.x = float(x)
+        pose.pose.position.y = float(y)
 
-		goal_handle.get_result_async().add_done_callback(self.goal_result_callback)
+        pose.pose.orientation.w = 1.0
 
-	def goal_result_callback(self, future):
-		result = future.result()
+        goal.pose = pose
 
-		self.get_logger().info("Goal finished")
+        self.get_logger().info(
+            f"Sending Nav2 goal: ({x:.2f}, {y:.2f})"
+        )
 
-		self.goal_active = False
+        self.nav_client.send_goal_async(
+            goal
+        ).add_done_callback(
+            self.goal_response_callback
+        )
 
-	def odom_callback(self, msg):
-		self.robot_x = msg.pose.pose.position.x
-		self.robot_y = msg.pose.pose.position.y
+    def explore(self):
+
+        if self.map_data is None:
+            return
+
+        if self.goal_active:
+            return
+
+        grid = self.map_data.data
+        width = self.map_data.info.width
+        height = self.map_data.info.height
+
+        frontiers = self.find_frontiers(
+            grid,
+            width,
+            height
+        )
+
+        if len(frontiers) < self.MIN_FRONTIER_COUNT:
+
+            self.no_frontier_count += 1
+
+            self.get_logger().info(
+                f"Few frontiers remaining: {len(frontiers)}"
+            )
+
+            if self.no_frontier_count > 5:
+                self.get_logger().info(
+                    "Exploration complete!"
+                )
+
+            return
+
+        else:
+            self.no_frontier_count = 0
+
+        random.shuffle(frontiers)
+
+        origin = self.map_data.info.origin.position
+        res = self.map_data.info.resolution
+
+        for frontier in frontiers:
+
+            x = origin.x + frontier[0] * res
+            y = origin.y + frontier[1] * res
+
+            if self.is_goal_valid(x, y):
+
+                self.send_goal(x, y)
+                return
+
+        self.get_logger().info(
+            "No valid frontier goals found"
+        )
+
+    def goal_response_callback(self, future):
+
+        goal_handle = future.result()
+
+        if not goal_handle.accepted:
+
+            self.get_logger().info(
+                "Goal rejected"
+            )
+
+            self.goal_active = False
+            return
+
+        self.get_logger().info(
+            "Goal accepted"
+        )
+
+        goal_handle.get_result_async().add_done_callback(
+            self.goal_result_callback
+        )
+
+    def goal_result_callback(self, future):
+
+        result = future.result().result
+
+        status = future.result().status
+
+        self.get_logger().info(
+            f"Goal finished with status: {status}"
+        )
+
+        if status != 4:
+            pass
+        else:
+            self.failed_goals.append(
+                (self.robot_x, self.robot_y)
+            )
+
+            self.get_logger().info(
+                "Goal failed, blacklisting area"
+            )
+
+        self.goal_active = False
+
 
 def main():
-	rclpy.init()
-	node = FrontierExplorer()
-	rclpy.spin(node)
-	node.destroy_node()
-	rclpy.shutdown()
+
+    rclpy.init()
+
+    node = FrontierExplorer()
+
+    rclpy.spin(node)
+
+    node.destroy_node()
+
+    rclpy.shutdown()
+
 
 if __name__ == '__main__':
-	main()
+    main()
