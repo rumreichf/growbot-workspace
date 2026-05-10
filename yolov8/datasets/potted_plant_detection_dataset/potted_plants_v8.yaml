@@ -1,0 +1,6 @@
+path: potted_plant_detection_dataset/
+train: 'images/train'
+val: 'images/valid'
+
+names:
+  0: 'potted_plant'

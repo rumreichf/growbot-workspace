@@ -1,0 +1,37 @@
+[2.151s] Invoking command in '/home/frankie/ros2_ws/src/my_custom_world': PYTHONPATH=/home/frankie/ros2_ws/build/my_custom_world/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/my_custom_world/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_custom_world build --build-base /home/frankie/ros2_ws/build/my_custom_world/build install --record /home/frankie/ros2_ws/build/my_custom_world/install.log --single-version-externally-managed install_data
+[2.593s] running egg_info
+[2.594s] creating ../../build/my_custom_world/my_custom_world.egg-info
+[2.595s] writing ../../build/my_custom_world/my_custom_world.egg-info/PKG-INFO
+[2.595s] writing dependency_links to ../../build/my_custom_world/my_custom_world.egg-info/dependency_links.txt
+[2.595s] writing entry points to ../../build/my_custom_world/my_custom_world.egg-info/entry_points.txt
+[2.597s] writing requirements to ../../build/my_custom_world/my_custom_world.egg-info/requires.txt
+[2.597s] writing top-level names to ../../build/my_custom_world/my_custom_world.egg-info/top_level.txt
+[2.597s] writing manifest file '../../build/my_custom_world/my_custom_world.egg-info/SOURCES.txt'
+[2.599s] reading manifest file '../../build/my_custom_world/my_custom_world.egg-info/SOURCES.txt'
+[2.600s] writing manifest file '../../build/my_custom_world/my_custom_world.egg-info/SOURCES.txt'
+[2.600s] running build
+[2.600s] running build_py
+[2.601s] creating /home/frankie/ros2_ws/build/my_custom_world/build
+[2.601s] creating /home/frankie/ros2_ws/build/my_custom_world/build/lib
+[2.601s] creating /home/frankie/ros2_ws/build/my_custom_world/build/lib/my_custom_world
+[2.601s] copying my_custom_world/__init__.py -> /home/frankie/ros2_ws/build/my_custom_world/build/lib/my_custom_world
+[2.601s] running install
+[2.602s] running install_lib
+[2.605s] creating /home/frankie/ros2_ws/install/my_custom_world/lib/python3.10/site-packages/my_custom_world
+[2.605s] copying /home/frankie/ros2_ws/build/my_custom_world/build/lib/my_custom_world/__init__.py -> /home/frankie/ros2_ws/install/my_custom_world/lib/python3.10/site-packages/my_custom_world
+[2.605s] byte-compiling /home/frankie/ros2_ws/install/my_custom_world/lib/python3.10/site-packages/my_custom_world/__init__.py to __init__.cpython-310.pyc
+[2.605s] running install_data
+[2.605s] creating /home/frankie/ros2_ws/install/my_custom_world/share/ament_index
+[2.605s] creating /home/frankie/ros2_ws/install/my_custom_world/share/ament_index/resource_index
+[2.606s] creating /home/frankie/ros2_ws/install/my_custom_world/share/ament_index/resource_index/packages
+[2.606s] copying resource/my_custom_world -> /home/frankie/ros2_ws/install/my_custom_world/share/ament_index/resource_index/packages
+[2.606s] copying package.xml -> /home/frankie/ros2_ws/install/my_custom_world/share/my_custom_world
+[2.606s] creating /home/frankie/ros2_ws/install/my_custom_world/share/my_custom_world/launch
+[2.606s] copying launch/custom_house.launch.py -> /home/frankie/ros2_ws/install/my_custom_world/share/my_custom_world/launch
+[2.606s] creating /home/frankie/ros2_ws/install/my_custom_world/share/my_custom_world/worlds
+[2.606s] copying worlds/my_house.world -> /home/frankie/ros2_ws/install/my_custom_world/share/my_custom_world/worlds
+[2.606s] running install_egg_info
+[2.608s] Copying ../../build/my_custom_world/my_custom_world.egg-info to /home/frankie/ros2_ws/install/my_custom_world/lib/python3.10/site-packages/my_custom_world-0.0.0-py3.10.egg-info
+[2.609s] running install_scripts
+[2.641s] writing list of installed files to '/home/frankie/ros2_ws/build/my_custom_world/install.log'
+[2.691s] Invoked command in '/home/frankie/ros2_ws/src/my_custom_world' returned '0': PYTHONPATH=/home/frankie/ros2_ws/build/my_custom_world/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/frankie/ros2_ws/install/my_custom_world/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_custom_world build --build-base /home/frankie/ros2_ws/build/my_custom_world/build install --record /home/frankie/ros2_ws/build/my_custom_world/install.log --single-version-externally-managed install_data
